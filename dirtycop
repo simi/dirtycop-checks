@@ -174,9 +174,9 @@ module RuboCop
       [offenses, updated]
     end
 
-    alias add_unneeded_disables_unpatched add_unneeded_disables
-    def add_unneeded_disables(file, offenses, source)
-      offenses = add_unneeded_disables_unpatched(file, offenses, source)
+    alias add_redundant_disables_unpatched add_redundant_disables
+    def add_redundant_disables(file, offenses, source)
+      offenses = add_redundant_disables_unpatched(file, offenses, source)
       DirtyCop.bury_evidences(file, offenses)
     end
   end
